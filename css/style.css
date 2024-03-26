@@ -163,7 +163,7 @@ div.menu-item.selected, div.menu-item:hover {
 }
 
 /* Estilos para resoluciones de celulares */
-@media (max-width: 767px) {
+@media (max-width: 640px) {
     h1{
         font-size: 2rem;
     }
