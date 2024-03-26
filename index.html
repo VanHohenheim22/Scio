@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="https://sciocorp.org/images/favicon.png">
+	<title>Revistas Open-Access en Colombia</title>
+	<link href="./css/style.css" rel="stylesheet" />
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+	<script src="./js/crossfilter.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dc/4.2.7/dc.min.js"></script>
+	<script src="./js/DivMenu.js"></script>
+</head>
+
+<body>
+	<main class="contenedor" id="cuerpo">
+		<header class="header">
+			<div class="info">
+				<img class="img" src="./design/Icono_Información.svg" alt="información" />
+				<h1>Revistas Open Access en Colombia</h1>
+			</div>
+
+			<nav class="nav">
+				<img class="img" loading="lazy" src="./design/Icono_home.svg" alt="icono_home" />
+				<a href="#">inicio</a>
+				<a href="#">Investigadores</a>
+				<a href="#">Cronología</a>
+			</nav>
+		</header>
+
+		<div id="container">
+			<div id="Total" class="total1">
+				<div class="recarga">
+					<img id= "resetfiltros" class="img" src="./design/Icono_recargarFiltro.svg" alt="recarga" />
+					<span>Limpiar filtros</span>
+				</div>
+
+				<div class="articulos">
+					<div id="Total-articulos"></div>
+					<span>Total de artículos publicados en revistas OA</span>
+				</div>
+			</div>
+			<div class="graficos-U">
+				<div id="barChart_totalJournalsTiempo"></div>
+				<div id="divMenu_Institucion"></div>
+			</div>
+			<div class="aviso-voltear">
+				<span>Use el celular de manera horizontal, por favor</span>
+			</div>
+		</div>
+		<div class="logo">
+			<img class="img" src="./design/Logo_SCIO_letrasblancas.png" alt="Scio">
+		</div>
+	</main>
+</body>
+<script src="./js/drawCharts.js"></script>
+<script>
+	d3.json("data/Colombian-Open_access_journals.json").then(function (data) {
+		xfilter.add(data);
+		barChart_TotalperYear.render();
+		divMenu_institutions.render();
+		totalDocs.render();
+	});
+</script>
+
+</html>

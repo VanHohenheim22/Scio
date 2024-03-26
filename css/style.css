@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'Madeleina';
+    src: url(../design/Madeleina\ Sans.otf)
+    format('truetype');
+}
+
+p{
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+span {
+    font-size: 1.6rem;
+}
+
+html, body{
+    background-color: #13273F;
+    color: white;
+    height: 100%;
+    font-family: "Madeleina", sansserif;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin-right: 5px;
+}
+a:nth-child(4){
+    margin-right: 0px;
+}
+
+.contenedor{
+    width: 98%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+}
+.info .img{
+    width: 50px;
+    padding: 0 15px 0 15px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+
+}
+
+.nav .img{
+    width: 15px;
+}
+
+.total1{
+    display: flex;
+    justify-content: space-between;
+    height: 15%;
+    align-items: center;
+}
+
+.articulos{
+    margin-right: 20%;
+}
+
+.articulos :nth-child(1){
+    font-size: 5rem;
+    font-weight: 550;
+}
+
+.recarga{
+    margin-top: 1.5rem;
+    display: inline-block;
+    max-height: max-content;
+}
+.recarga img{
+    display: block;
+}
+
+.recarga .img{
+    width: 20px;
+    cursor: pointer;
+}
+
+#Total-articulos {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+}
+
+.graficos-U{
+    margin-top: 3%;
+    padding: 20px;
+    display: flex;
+    height: 70%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container {
+    width: 100%;
+    height: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#divMenu_Institucion{
+    display: flex;
+    flex-direction: column;
+    max-height: fit-content;
+    width: 40%;
+    overflow-y: auto;
+}
+
+#barChart_totalJournalsTiempo, #divMenu_Institucion {
+    margin-bottom: 20px;
+}
+
+#container > div > span {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+div.menu-item{
+    cursor: pointer;
+}
+
+
+
+div.menu-item.selected, div.menu-item:hover {
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+    border-color: #b05724;
+    background-color: #0e3151;
+}
+
+.aviso-voltear{
+    width: 0px;
+    height: 0px;
+    opacity: 0;
+}
+
+.logo{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.logo img{
+    width: 150px;
+}
+
+/* Estilos para resoluciones de celulares */
+@media (max-width: 767px) {
+    h1{
+        font-size: 2rem;
+    }
+
+    .articulos :nth-child(1){
+        font-size: 2rem;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+
+    .info .img{
+        width: 25px;
+    }
+
+    #divMenu_Institucion {
+        width: 100%;
+        max-height: 250px; /* Ajusta la altura según tus necesidades */
+        overflow-y: auto; /* Agrega un scroll vertical si es necesario */
+      }
+
+      .aviso-voltear{
+        width: auto;
+        height: 1rem;
+        opacity: 1;
+    }
+      .logo img{
+        margin-top: 1rem;
+        width: 75px;
+      }
+ }
